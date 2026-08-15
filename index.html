@@ -84,350 +84,13 @@
 
 
     <!-- =====================================================
-         MAIN STYLES
+         STYLES
     ====================================================== -->
 
     <link
         rel="stylesheet"
         href="styles.css"
     >
-
-
-    <!-- =====================================================
-         HERO LAYOUT OVERRIDES
-
-         These rules intentionally override older conflicting
-         hero-photo rules that may still exist in styles.css.
-    ====================================================== -->
-
-    <style>
-
-        /* Remove the old AI Systems / GenAI / Agentic AI pill */
-        .availability {
-            display: none !important;
-        }
-
-
-        /* Keep the hero compact and professional */
-        .hero {
-            min-height: auto !important;
-
-            padding-top: 135px !important;
-            padding-bottom: 75px !important;
-        }
-
-
-        .hero-container {
-            position: relative;
-
-            width: min(calc(100% - 48px), 1180px);
-
-            max-width: 1180px;
-
-            margin: 0 auto;
-        }
-
-
-        /* =================================================
-           LEFT TEXT + RIGHT PHOTO
-        ================================================== */
-
-        .hero-main {
-            position: relative;
-            z-index: 2;
-
-            width: 100%;
-
-            display: grid !important;
-
-            grid-template-columns:
-                minmax(0, 1fr)
-                280px !important;
-
-            align-items: center !important;
-
-            gap: 70px !important;
-        }
-
-
-        .hero-text {
-            width: 100%;
-
-            min-width: 0;
-        }
-
-
-        .hero-eyebrow {
-            margin-bottom: 14px !important;
-        }
-
-
-        .hero h1 {
-            max-width: 820px;
-
-            margin-bottom: 25px !important;
-
-            font-size:
-                clamp(
-                    3.2rem,
-                    5.4vw,
-                    5.7rem
-                ) !important;
-
-            line-height: 1.01 !important;
-
-            letter-spacing: -0.055em !important;
-        }
-
-
-        .hero-description {
-            max-width: 760px !important;
-
-            margin-bottom: 24px !important;
-
-            font-size:
-                clamp(
-                    15px,
-                    1.35vw,
-                    18px
-                ) !important;
-
-            line-height: 1.7 !important;
-        }
-
-
-        .hero-tags {
-            margin-bottom: 28px !important;
-        }
-
-
-        .hero-actions {
-            display: flex;
-
-            flex-wrap: wrap;
-
-            gap: 10px;
-        }
-
-
-        /* =================================================
-           RIGHT PROFILE PHOTO
-        ================================================== */
-
-        .hero-profile {
-            position: relative;
-
-            width: 280px !important;
-            max-width: 280px !important;
-
-            margin-left: auto !important;
-
-            align-self: center;
-        }
-
-
-        .profile-photo-border {
-            position: relative;
-
-            width: 280px !important;
-            height: 350px !important;
-
-            padding: 4px;
-
-            overflow: hidden;
-
-            border-radius: 24px;
-
-            background:
-                linear-gradient(
-                    145deg,
-                    #5ee7ff,
-                    #9080ff,
-                    rgba(255, 255, 255, 0.15)
-                );
-
-            box-shadow:
-                0 24px 60px rgba(0, 0, 0, 0.40),
-                0 0 35px rgba(94, 231, 255, 0.08);
-        }
-
-
-        .profile-photo {
-            display: block !important;
-
-            width: 100% !important;
-            height: 100% !important;
-
-            max-width: none !important;
-
-            object-fit: cover !important;
-            object-position: center top !important;
-
-            border-radius: 20px;
-        }
-
-
-        /* Small professional title card below photo */
-        .profile-role {
-            position: absolute !important;
-
-            left: 18px;
-            right: 18px;
-            bottom: -30px;
-
-            display: block !important;
-
-            padding: 13px 15px;
-
-            border: 1px solid rgba(255, 255, 255, 0.13);
-
-            border-radius: 12px;
-
-            background: rgba(10, 14, 22, 0.94);
-
-            backdrop-filter: blur(14px);
-
-            box-shadow:
-                0 14px 32px rgba(0, 0, 0, 0.32);
-        }
-
-
-        .profile-role strong {
-            display: block;
-
-            margin: 0;
-
-            font-size: 13px;
-            line-height: 1.4;
-        }
-
-
-        .profile-role p {
-            margin: 4px 0 0;
-
-            color: #8e98aa;
-
-            font-size: 10px;
-            line-height: 1.4;
-        }
-
-
-        /* =================================================
-           METRICS BELOW HERO
-        ================================================== */
-
-        .hero-metrics {
-            width: 100% !important;
-
-            display: flex !important;
-
-            align-items: stretch !important;
-
-            margin-top: 85px !important;
-
-            padding-top: 30px !important;
-
-            border-top:
-                1px solid
-                rgba(255, 255, 255, 0.10);
-        }
-
-
-        .metric {
-            flex: 1;
-        }
-
-
-        /* =================================================
-           TABLET
-        ================================================== */
-
-        @media (max-width: 950px) {
-
-            .hero-main {
-                grid-template-columns:
-                    minmax(0, 1fr)
-                    240px !important;
-
-                gap: 42px !important;
-            }
-
-
-            .hero-profile {
-                width: 240px !important;
-                max-width: 240px !important;
-            }
-
-
-            .profile-photo-border {
-                width: 240px !important;
-                height: 310px !important;
-            }
-
-
-            .hero h1 {
-                font-size:
-                    clamp(
-                        2.8rem,
-                        6vw,
-                        4.6rem
-                    ) !important;
-            }
-
-        }
-
-
-        /* =================================================
-           MOBILE
-        ================================================== */
-
-        @media (max-width: 760px) {
-
-            .hero {
-                padding-top: 115px !important;
-            }
-
-
-            .hero-main {
-                grid-template-columns: 1fr !important;
-
-                gap: 48px !important;
-            }
-
-
-            .hero-profile {
-                width: 250px !important;
-                max-width: 250px !important;
-
-                margin:
-                    0
-                    auto !important;
-            }
-
-
-            .profile-photo-border {
-                width: 250px !important;
-                height: 320px !important;
-            }
-
-
-            .hero h1 {
-                font-size:
-                    clamp(
-                        2.7rem,
-                        11vw,
-                        4rem
-                    ) !important;
-            }
-
-
-            .hero-metrics {
-                margin-top: 75px !important;
-            }
-
-        }
-
-    </style>
 
 
     <!-- =====================================================
@@ -544,7 +207,6 @@
 </header>
 
 
-
 <main>
 
 
@@ -558,7 +220,6 @@
 >
 
     <div class="hero-glow hero-glow-one"></div>
-
     <div class="hero-glow hero-glow-two"></div>
 
 
@@ -687,43 +348,26 @@
             </div>
 
 
-
             <!-- =================================================
                  RIGHT SIDE PHOTO
             ================================================== -->
 
             <div class="hero-profile">
 
-
                 <div class="profile-photo-border">
 
                     <img
                         src="assets/profile/madhukar-goli.jpg"
-                        alt="Madhukar Goli - AI ML Engineer"
+                        alt="Madhukar Goli - AI ML Systems Engineer"
                         class="profile-photo"
                     >
 
                 </div>
 
-
-                <div class="profile-role">
-
-                    <strong>
-                        AI ML Engineer
-                    </strong>
-
-                    <p>
-                        GenAI • RAG • Agentic AI
-                    </p>
-
-                </div>
-
-
             </div>
 
 
         </div>
-
 
 
         <!-- =================================================
@@ -786,7 +430,6 @@
 </section>
 
 
-
 <!-- =========================================================
      ABOUT
 ========================================================= -->
@@ -819,9 +462,12 @@
         </div>
 
 
-
         <div class="about-grid">
 
+
+            <!-- =================================================
+                 ABOUT CONTENT
+            ================================================== -->
 
             <div class="about-content">
 
@@ -832,8 +478,27 @@
 
                     <strong>
                         AI engineering, machine learning,
-                        information retrieval,
-                        and enterprise systems.
+                        information retrieval, and enterprise systems,
+                    </strong>
+
+                    with a focus on building production-oriented
+                    Generative AI and Agentic AI solutions for
+                    complex, data-intensive environments.
+
+                </p>
+
+
+                <p>
+
+                    I design AI systems that go beyond basic
+                    prompt-and-response applications. My work includes
+
+                    <strong>
+                        Retrieval-Augmented Generation (RAG),
+                        Agentic AI workflows, hybrid and multi-vector retrieval,
+                        semantic search, reranking, metadata-aware retrieval,
+                        validation loops, confidence scoring,
+                        and citation-grounded response generation.
                     </strong>
 
                 </p>
@@ -841,23 +506,62 @@
 
                 <p>
 
-                    I specialize in designing AI applications that can
-                    reason over complex structured and unstructured data,
-                    retrieve relevant information,
-                    validate generated responses,
-                    and deliver grounded answers with citations.
+                    I am particularly interested in solving the engineering
+                    challenges that determine whether an AI application
+                    actually works reliably in production — including
+
+                    <strong>
+                        retrieval accuracy, hallucination reduction,
+                        grounding, latency, token efficiency, scalability,
+                        observability, evaluation, and system reliability.
+                    </strong>
 
                 </p>
 
 
                 <p>
 
-                    My background spans data science,
-                    analytics,
-                    machine learning,
-                    and modern Generative AI systems,
-                    giving me the ability to connect technical architecture
-                    with real business problems.
+                    My background spans
+
+                    <strong>
+                        data science, analytics, machine learning,
+                        and AI systems engineering,
+                    </strong>
+
+                    allowing me to approach technical problems from both
+                    the data and software-engineering sides.
+
+                </p>
+
+
+                <p>
+
+                    I work across modern AI engineering technologies including
+
+                    <strong>
+                        Python, FastAPI, LangGraph, LangChain,
+                        vector databases, hybrid retrieval systems,
+                        cloud platforms, containerized deployments,
+                        and modern LLM infrastructure
+                    </strong>
+
+                    to transform structured and unstructured enterprise data
+                    into intelligent applications.
+
+                </p>
+
+
+                <p>
+
+                    My current direction is toward deeper
+
+                    <strong>
+                        AI/ML systems engineering,
+                    </strong>
+
+                    combining Generative AI and Agentic AI expertise with
+                    machine learning, model evaluation, scalable inference,
+                    and production AI architecture.
 
                 </p>
 
@@ -865,6 +569,9 @@
             </div>
 
 
+            <!-- =================================================
+                 CURRENT FOCUS
+            ================================================== -->
 
             <div class="focus-card">
 
@@ -956,7 +663,6 @@
 </section>
 
 
-
 <!-- =========================================================
      EXPERIENCE
 ========================================================= -->
@@ -987,7 +693,6 @@
             </h2>
 
         </div>
-
 
 
         <div class="experience-card">
@@ -1023,7 +728,6 @@
             </div>
 
 
-
             <div class="experience-body">
 
 
@@ -1031,8 +735,7 @@
 
                     Designing and developing enterprise-oriented
                     Generative AI systems for large-scale financial,
-                    regulatory,
-                    and document-intensive workflows.
+                    regulatory, and document-intensive workflows.
 
                 </p>
 
@@ -1125,7 +828,6 @@
 </section>
 
 
-
 <!-- =========================================================
      PROJECTS
 ========================================================= -->
@@ -1171,11 +873,12 @@
         </div>
 
 
-
         <div class="projects-grid">
 
 
-            <!-- PROJECT 1 -->
+            <!-- =================================================
+                 PROJECT 1
+            ================================================== -->
 
             <article class="project-card project-featured">
 
@@ -1219,10 +922,7 @@
 
                     Enterprise-inspired Agentic AI platform for
                     multimodal document intelligence across PDFs,
-                    DOCX,
-                    PPTX,
-                    spreadsheets,
-                    text,
+                    DOCX, PPTX, spreadsheets, text,
                     and image-based content.
 
                 </p>
@@ -1284,8 +984,9 @@
             </article>
 
 
-
-            <!-- PROJECT 2 -->
+            <!-- =================================================
+                 PROJECT 2
+            ================================================== -->
 
             <article class="project-card">
 
@@ -1318,8 +1019,7 @@
 
                     Retrieval-based decision intelligence system
                     designed to analyze vendor documents,
-                    SLA obligations,
-                    risks,
+                    SLA obligations, risks,
                     and business-critical information.
 
                 </p>
@@ -1356,8 +1056,9 @@
             </article>
 
 
-
-            <!-- PROJECT 3 -->
+            <!-- =================================================
+                 PROJECT 3
+            ================================================== -->
 
             <article class="project-card">
 
@@ -1389,11 +1090,8 @@
                 <p class="project-description">
 
                     AI marketplace assistant combining autonomous
-                    reasoning,
-                    tool calling,
-                    routing,
-                    pricing intelligence,
-                    memory,
+                    reasoning, tool calling, routing,
+                    pricing intelligence, memory,
                     and multi-step orchestration.
 
                 </p>
@@ -1438,7 +1136,6 @@
 </section>
 
 
-
 <!-- =========================================================
      ENGINEERING APPROACH
 ========================================================= -->
@@ -1468,7 +1165,6 @@
 
 
         </div>
-
 
 
         <div class="pipeline">
@@ -1587,7 +1283,6 @@
 </section>
 
 
-
 <!-- =========================================================
      SKILLS
 ========================================================= -->
@@ -1622,7 +1317,6 @@
         </div>
 
 
-
         <div class="skills-grid">
 
 
@@ -1646,7 +1340,6 @@
             </div>
 
 
-
             <div class="skill-card">
 
                 <span class="skill-number">
@@ -1665,7 +1358,6 @@
                 </p>
 
             </div>
-
 
 
             <div class="skill-card">
@@ -1688,7 +1380,6 @@
             </div>
 
 
-
             <div class="skill-card">
 
                 <span class="skill-number">
@@ -1709,7 +1400,6 @@
             </div>
 
 
-
             <div class="skill-card">
 
                 <span class="skill-number">
@@ -1728,7 +1418,6 @@
                 </p>
 
             </div>
-
 
 
             <div class="skill-card">
@@ -1757,7 +1446,6 @@
     </div>
 
 </section>
-
 
 
 <!-- =========================================================
@@ -1794,7 +1482,6 @@
         </div>
 
 
-
         <div class="education-card">
 
 
@@ -1815,7 +1502,6 @@
                 </p>
 
             </div>
-
 
 
             <div class="education-meta">
@@ -1858,7 +1544,6 @@
 </section>
 
 
-
 <!-- =========================================================
      CONTACT
 ========================================================= -->
@@ -1894,7 +1579,6 @@
             and production AI systems.
 
         </p>
-
 
 
         <div class="contact-actions">
@@ -1945,7 +1629,6 @@
 
 
 </main>
-
 
 
 <!-- =========================================================
